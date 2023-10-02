@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2023-review",
+    "date": "2023-12-31",
+    "title": "2023년 리뷰",
+    "description": "2023년 한해 동안 배운 기술등, 생각들 정리",
+    "tag": ["mystory"],
+    "featured": true,
+    "path": "@/../data/posts/md/202년리뷰.md"
+  },
+  {
+    "id": "1235",
+    "name": "Skirt",
+    "price": 2000
+  },
+  {
+    "id": "1236",
+    "name": "Dress",
+    "price": 3000
+  },
+  {
+    "id": "1237",
+    "name": "Shirt",
+    "price": 4000
+  }
+]
