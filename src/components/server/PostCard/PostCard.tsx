@@ -2,8 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PostCardDataType } from '@/service/posts';
 
+type SizeOptions = 'w-full' | 'w-2/3' | 'w-1/2' | 'w-1/3' | 'w-1/5';
+
 export type PostCardType = PostCardDataType & {
-  size: string;
+  size: SizeOptions;
 };
 
 type Props = {
@@ -15,7 +17,7 @@ export default function PostCard({ postcard }: Props) {
     return (
       <div className="w-1/3 flex flex-col">
         <Link href={`/posts/${path}`} className="w-11/12 h-2/5 mb-4">
-          <Image src={`/images/posts/${path}.png`} alt={`${path}`} width={0} height={0} sizes={size} className="w-full h-auto" />
+          <Image src={`/images/posts/${path}.png`} alt={`${path}`} width={0} height={0} sizes={'100vw'} className={`${size} h-auto`} />
           <section className="w-full flex flex-col items-center">
             <p className="w-auto ml-auto">{date}</p>
             <p className="font-semibold text-lg">{title}</p>

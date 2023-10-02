@@ -22,10 +22,8 @@ export default async function MainPage() {
           <p className="text-xl font-semibold">Featured Posts</p>
           <div className="flex flex-wrap justify-start items-center">
             {posts.map((item) => {
-              if (item.featured) {
-                const postcard: PostCardType = { ...item, size: '100vw' };
-                return <PostCard key={item.path} postcard={postcard} />;
-              }
+              const postcard: PostCardType = { ...item, size: 'w-full' };
+              return <PostCard key={item.path} postcard={postcard} />;
             })}
           </div>
         </section>
