@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPosts } from '@/service/posts';
+import PostCard, { PostCardType } from '@/components/server/PostCard/PostCard';
 export default async function MainPage() {
   const posts = await getPosts();
   return (
@@ -20,21 +21,10 @@ export default async function MainPage() {
         <section className="mt-5">
           <p className="text-xl font-semibold">Featured Posts</p>
           <div className="flex flex-wrap justify-start items-center">
-            {posts.map(({ date, title, description, category, featured, path }, index) => {
-              if (featured) {
-                return (
-                  <div key={path} className="w-1/3 flex flex-col">
-                    <Link href={`/posts/${path}`} className="w-11/12 h-2/5 mb-4">
-                      <Image src={`/images/posts/${path}.png`} alt={`${path}`} width={0} height={0} sizes="100vw" className="w-full h-auto" />
-                      <section className="w-full flex flex-col items-center">
-                        <p className="w-auto ml-auto">{date}</p>
-                        <p className="font-semibold text-lg">{title}</p>
-                        <p className="">{description}</p>
-                        <p className="w-1/6 text-center  bg-green-300 rounded-full">{category}</p>
-                      </section>
-                    </Link>
-                  </div>
-                );
+            {posts.map((item) => {
+              if (item.featured) {
+                const postcard: PostCardType = { ...item, size: '100vw' };
+                return <PostCard key={item.path} postcard={postcard} />;
               }
             })}
           </div>

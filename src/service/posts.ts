@@ -1,6 +1,6 @@
 import path from 'path';
 import * as fs from 'fs/promises';
-export type Post = {
+export type PostCardDataType = {
   title: string;
   description: string;
   date: string;
@@ -8,13 +8,13 @@ export type Post = {
   featured: boolean;
   path: string;
 };
-export async function getPosts(): Promise<Post[]> {
+export async function getPosts(): Promise<PostCardDataType[]> {
   const postsPath = path.resolve('@', '../', 'data/posts/posts.json');
   const data = await fs.readFile(postsPath, { encoding: 'utf-8' });
   return JSON.parse(data);
 }
 
-export async function getPost(path: string): Promise<Post | undefined> {
+export async function getPost(path: string): Promise<PostCardDataType | undefined> {
   const posts = await getPosts();
   return posts.find((item) => item.path === path);
 }
