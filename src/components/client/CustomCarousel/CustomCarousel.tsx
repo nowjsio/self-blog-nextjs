@@ -36,20 +36,21 @@ export default function CustomCarousel({ posts }: Props) {
   return (
     // <p>test</p>
     <Carousel
-      swipeable={false}
-      draggable={false}
+      swipeable={true}
+      draggable={true}
       showDots={true}
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
       infinite={true}
-      autoPlaySpeed={1000}
+      autoPlay={false}
+      autoPlaySpeed={3000}
       keyBoardControl={true}
       customTransition="all .5"
       transitionDuration={500}
-      containerClass="carousel-container"
-      itemClass="carousel-image-item"
+      //   containerClass="carousel-container"
+      //   itemClass="carousel-image-item"
       removeArrowOnDeviceType={['tablet', 'mobile']}
-      dotListClass="custom-dot-list-style"
+      //   dotListClass="custom-dot-list-style"
     >
       {posts.map((item) => {
         const postcard: PostCardType = { ...item, size: 'w-1/3' };
