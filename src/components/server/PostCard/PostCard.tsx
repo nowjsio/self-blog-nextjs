@@ -8,12 +8,13 @@ export type PostCardType = PostCardDataType & {
   size: SizeOptions;
 };
 
-type Props = {
+export type Props = {
   postcard: PostCardType;
+  isCarousel: boolean;
 };
-export default function PostCard({ postcard }: Props) {
+export default function PostCard({ postcard, isCarousel }: Props) {
   const { date, title, description, category, featured, path, size } = postcard;
-  if (featured) {
+  if (isCarousel == true || featured) {
     return (
       <div className="w-1/3 flex flex-col">
         <Link href={`/posts/${path}`} className="w-11/12 h-2/5 mb-4">

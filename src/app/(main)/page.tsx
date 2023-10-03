@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPosts } from '@/service/posts';
 import PostCard, { PostCardType } from '@/components/server/PostCard/PostCard';
+import CustomCarousel from '@/components/client/CustomCarousel/CustomCarousel';
 export default async function MainPage() {
   const posts = await getPosts();
   return (
@@ -23,14 +24,15 @@ export default async function MainPage() {
           <div className="flex flex-wrap justify-start items-center">
             {posts.map((item) => {
               const postcard: PostCardType = { ...item, size: 'w-full' };
-              return <PostCard key={item.path} postcard={postcard} />;
+              return <PostCard key={item.path} postcard={postcard} isCarousel={false} />;
             })}
           </div>
         </section>
-
+        <section>
+          <CustomCarousel posts={posts} />
+        </section>
         <section className="mt-5">
           <p className="text-xl font-semibold">You may likes</p>
-          <div>carouel posts</div>
         </section>
       </div>
     </>
