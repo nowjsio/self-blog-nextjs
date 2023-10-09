@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`flex flex-col justify-center items-center ${inter.className} min-h-screen mx-10`}>
+      <body className={`flex flex-col justify-center items-center no-scrollbar ${inter.className} min-h-screen mx-10`}>
         <header className="flex-initial w-full flex justify-between pt-2 items-center  border-b-4  p-2 mb-4">
           <p className="text-3xl">nowjsio 의 블로그</p>
           <section className="mr-10">
