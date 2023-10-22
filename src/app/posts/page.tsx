@@ -1,7 +1,4 @@
+import Posts from '@/components/client/Posts/Posts';
 export default function PostsPage() {
-  return (
-    <>
-      <h1>PostPage</h1>
-    </>
-  );
+  return <Posts />;
 }

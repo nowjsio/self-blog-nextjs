@@ -53,8 +53,8 @@ export default function CustomCarousel({ posts }: Props) {
       //   dotListClass="custom-dot-list-style"
     >
       {posts.map((item) => {
-        const postcard: PostCardType = { ...item, size: 'w-1/3' };
-        return <PostCard key={item.path} postcard={postcard} isCarousel={true} />;
+        const postcard: PostCardType = { ...item, size: 'w-full' };
+        return <PostCard key={item.path} postcard={postcard} />;
       })}
     </Carousel>
   );

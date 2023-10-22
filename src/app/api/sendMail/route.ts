@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { sendMail } from '@/service/sendmail';
 /**
  * api route 를 사용하려면, component 를 사용할 때, page.tsx 라고 규약된것처럼, route.tsx 로 사용해야된다.
@@ -17,7 +17,7 @@ import { sendMail } from '@/service/sendmail';
 //   return NextResponse.json({ data });
 // }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const { address, subject, textarea } = await request.json();
   try {
     await sendMail(address, subject, textarea);
