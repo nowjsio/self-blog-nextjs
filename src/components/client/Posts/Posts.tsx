@@ -32,19 +32,19 @@ export default function Posts() {
       </section>
       <section className="flex flex-col">
         <p className="text-2xl mb-4 underline underline-offset-8 decoration-blue-500"> category</p>
-        <button onClick={handleClick} value="All posts">
+        <button className="hover:bg-blue-500 hover:rounded-full hover:text-white " onClick={handleClick} value="All posts">
           All posts
         </button>
-        <button onClick={handleClick} value="my story">
+        <button className="hover:bg-blue-500 hover:rounded-full hover:text-white " onClick={handleClick} value="my story">
           my story
         </button>
-        <button onClick={handleClick} value="frontend">
+        <button className="hover:bg-blue-500 hover:rounded-full hover:text-white" onClick={handleClick} value="frontend">
           frontend
         </button>
-        <button onClick={handleClick} value="backend">
+        <button className="hover:bg-blue-500 hover:rounded-full hover:text-white" onClick={handleClick} value="backend">
           backend
         </button>
-        <button onClick={handleClick} value="javascript">
+        <button className="hover:bg-blue-500 hover:rounded-full hover:text-white" onClick={handleClick} value="javascript">
           javascript
         </button>
       </section>
