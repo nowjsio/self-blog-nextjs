@@ -5,7 +5,7 @@ export default function AboutPage() {
     <>
       <div className="flex flex-col">
         <AboutMe />
-        <div className="p-5 mt-3 mb-3 bg-gray-200 flex flex-col justify-center items-center text-center">
+        <div className="p-5 mt-24 mb-3 bg-gray-200 flex flex-col justify-center items-center text-center">
           <section className="mt-2 mb-2">
             <p className="font-semibold text-base">Who ami I?</p>
             <article>

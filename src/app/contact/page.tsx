@@ -20,7 +20,7 @@ export default function ContactPage() {
             </Link>
           </section>
         </section>
-        <section className="mt-20 font-bold text-4xl">Or Send me an email</section>
+        <section className="mt-20 mb-9 font-bold text-4xl">Or Send me an email</section>
         <MailForm></MailForm>
       </div>
     </>
