@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function AboutMe() {
   return (
     <section className="flex flex-col items-center">
-      <Image src="/images/programmer-character.jpg" alt="programmer character image" width={200} height={200} className="rounded-full" />
+      <Image src="/images/programmer-character.jpg" alt="programmer character image" width={200} height={200} className="rounded-full" priority />
       <div>
         <p className="text-center text-2xl font-semibold">Hi, I&apos;m nowjsio</p>
         <p className="text-center text-base ">Full-Stack developer</p>
